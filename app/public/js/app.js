@@ -1,10 +1,53 @@
-'use strict';
+/*jshint unused:false */
+"use strict";
 
-var _ = require("lodash");
-var $ = require("jquery/dist/jquery");
+var _ = require('lodash');
 
-// There's some code in here
-_.each([1, 2, 3], function(val) {
-  console.log(val);
-});
-console.log("go!", $("body"));
+var angular = require('angular');
+require('angular-route');
+
+// var templates = require('./templates');
+
+// module.exports = angular.module('templates', [])
+//   .run(templates);
+
+
+module.exports = angular.module('app', [
+  'ngRoute'
+
+  // require('../form').name,
+])
+
+.config([
+  '$routeProvider',
+  function(
+    $routeProvider
+  ) {
+    $routeProvider
+      .when('/', {
+        templateUrl: 'templates/app.html',
+        controller:'AppCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+  }
+])
+
+/**
+ * Application controller
+ */
+.controller('AppCtrl', [
+  "$rootScope",
+  "$scope",
+  "$log",
+  function(
+    $rootScope,
+    $scope,
+    $log
+  ) {
+    $rootScope.log = function() {
+      $log.log.apply(null, arguments);
+    };
+  }
+]);

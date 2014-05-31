@@ -555,6 +555,32 @@ input[type=radio]:checked:after {opacity: 1;}
   z-index: 2;
 }
 
+/*Beasttum*/
+
+#beastLegs.value-1{
+  background: url("../images/legs/legs_q1.png") center no-repeat;
+  background-size: cover;
+  z-index: 4;
+}
+
+#beastLegs.value-2{
+  background: url("../images/legs/legs_q2.png") center no-repeat;
+  background-size: cover;
+  z-index: 4;
+}
+
+#beastLegs.value-3{
+  background: url("../images/legs/legs_q3.png") center no-repeat;
+  background-size: cover;
+  z-index: 4;
+}
+
+#beastLegs.value-4{
+  background: url("../images/legs/legs_q4.png") center no-repeat;
+  background-size: cover;
+  z-index: 4;
+}
+
 
 .answers{
   width: 70%;

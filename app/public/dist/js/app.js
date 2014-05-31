@@ -14,9 +14,9 @@ require('angular-route');
 
 
 module.exports = angular.module('app', [
-  'ngRoute'
+  'ngRoute',
 
-  // require('../form').name,
+  require('./lib/config').name,
 ])
 
 .config([
@@ -42,18 +42,205 @@ module.exports = angular.module('app', [
   "$rootScope",
   "$scope",
   "$log",
+  "answersService",
   function(
     $rootScope,
     $scope,
-    $log
+    $log,
+    answersService
   ) {
     $rootScope.log = function() {
       $log.log.apply(null, arguments);
     };
-  }
-]);
 
-},{"angular":3,"angular-route":2,"lodash":5}],2:[function(require,module,exports){
+    $scope.save = function() {
+      answersService.add({
+        answers: {
+          hello: 'yes'
+        }
+      });
+    };
+  }
+])
+
+.factory('answersService', require('./lib/answersService'));
+
+},{"./lib/answersService":2,"./lib/config":3,"angular":7,"angular-route":6,"lodash":9}],2:[function(require,module,exports){
+"use strict";
+
+/**
+ * answersService
+ */
+module.exports = function(
+  $http,
+  $q,
+  env
+) {
+
+  var apiBase = env.option('apiBase');
+  var GET_URL = apiBase + "/answers";
+  var POST_URL = apiBase + "/answers";
+
+  return {
+    all: function() {
+      var deferred = $q.defer();
+
+      $http.get(GET_URL).success(function(results) {
+        deferred.resolve(results);
+      });
+
+      return deferred.promise;
+    },
+    add: function(answers) {
+      var deferred = $q.defer();
+
+      $http.post(POST_URL, answers).success(function(results) {
+        deferred.resolve(results);
+      });
+
+      return deferred.promise;
+    }
+  };
+};
+
+module.exports["$inject"] = [
+  "$http",
+  "$q",
+  "env"
+];
+},{}],3:[function(require,module,exports){
+"use strict";
+
+var angular = require('angular');
+
+/**
+ * Configuration object
+ */
+module.exports = angular.module('config', [])
+
+/**
+ * A mapping of environments to hostnames
+ *
+ * @constant {Object}
+ */
+.constant('ENV_HOSTNAMES', {
+  dev: "localhost",
+  staging: "friend-beast.herokuapp.com"
+})
+
+/**
+ * Configuration object to store all the different
+ * environment options
+ *
+ * @constant {Object}
+ */
+.constant('ENV_OPTIONS', {
+  dev: {
+    apiBase: "http://localhost:8081"
+  },
+  staging: {
+    apiBase: "http://friend-beast.herokuapp.com"
+  }
+})
+
+/**
+ * Global configuration object
+ *
+ * @constant {Object} CONFIG
+ */
+.constant('CONFIG', {
+  "yesScore": 3,
+  "noScore": 0,
+
+  "highWeightMultiplier": 2,
+  "mediumWeightMultiplier": 1,
+  "lowWeightMultiplier": 0.5
+})
+
+.factory('env', require('./services/env'))
+.factory('currentEnvironment', require('./services/currentEnvironment'));
+
+},{"./services/currentEnvironment":4,"./services/env":5,"angular":7}],4:[function(require,module,exports){
+var _ = require('lodash');
+
+/**
+ * currentEnvironment
+ *
+ * Get the current environment based on the current hostname
+ *
+ * @return {String} Current environment. `undefined` if not found
+ */
+module.exports = function(
+  $window,
+  ENV_HOSTNAMES
+) {
+  "use strict";
+
+  var hostname = $window.location.hostname;
+  var environment = _.reduce(ENV_HOSTNAMES, function(memo, value, env) {
+    // Only find first environment that matches
+    if (memo) { return memo; }
+
+    var foundEnv;
+    if (_.isArray(value)) {
+      if (_.contains(value, hostname)) {
+        foundEnv = env;
+      }
+    } else {
+      if (value === hostname) {
+        foundEnv = env;
+      }
+    }
+
+    return foundEnv;
+  }, undefined);
+
+  return environment;
+};
+
+module.exports["$inject"] = [
+  '$window',
+  'ENV_HOSTNAMES'
+];
+},{"lodash":9}],5:[function(require,module,exports){
+/**
+ * env
+ *
+ * Environment singleton object to get environment
+ * options.
+ */
+module.exports = function(
+  $window,
+  ENV_OPTIONS,
+  currentEnvironment
+) {
+  "use strict";
+
+  return {
+    /**
+     * Get environment option from `ENV_OPTIONS`
+     * hash.
+     *
+     * @param {String} Option to get
+     * @return {String|Object} Environment object
+     */
+    option: function(opt) {
+      if (!currentEnvironment) { return; }
+
+      var envOptions = ENV_OPTIONS[currentEnvironment];
+      if (!envOptions) { return; }
+
+      return envOptions[opt];
+    }
+  };
+};
+
+module.exports["$inject"] = [
+  '$window',
+  'ENV_OPTIONS',
+  'currentEnvironment'
+];
+},{}],6:[function(require,module,exports){
 /**
  * @license AngularJS v1.2.17-build.163+sha.fafcd62
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -982,12 +1169,12 @@ function ngViewFillContentFactory($compile, $controller, $route) {
 
 })(window, window.angular);
 
-},{}],3:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 require('./lib/angular.min.js');
 
 module.exports = angular;
 
-},{"./lib/angular.min.js":4}],4:[function(require,module,exports){
+},{"./lib/angular.min.js":8}],8:[function(require,module,exports){
 /*
  AngularJS v1.2.16
  (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -1199,7 +1386,7 @@ function(a){var c={addOption:C,removeOption:C};return{restrict:"E",priority:100,
 terminal:!0});O.angular.bootstrap?console.log("WARNING: Tried to load angular more than once."):((Ga=O.jQuery)?(y=Ga,D(Ga.fn,{scope:Ja.scope,isolateScope:Ja.isolateScope,controller:Ja.controller,injector:Ja.injector,inheritedData:Ja.inheritedData}),Ab("remove",!0,!0,!1),Ab("empty",!1,!1,!1),Ab("html",!1,!1,!0)):y=N,Ea.element=y,Zc(Ea),y(U).ready(function(){Wc(U,$b)}))})(window,document);!angular.$$csp()&&angular.element(document).find("head").prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}</style>');
 //# sourceMappingURL=angular.min.js.map
 
-},{}],5:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 (function (global){
 /**
  * @license

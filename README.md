@@ -8,21 +8,18 @@ Install pre-requisites
 
     npm install
 
-Start the server
+For dev server with livereload, js compilation etc:
 
     grunt
 
-View the site at [http://localhost:7770](http://localhost:7770), or your local (internal) ip address (useful for testing on other devices). You can also run
+For dev server with api:
 
-    grunt open
+    node lib/server.js
+    # or, for auto reload
+    nodemon lib/server.js
 
-To run the site on another port, use the `port` flag eg,
+TODO: Consolidate these
 
-    grunt --port=3000
-
-To run the site using a different livereload port (default is `35729`), use the `lrp` flag (prevents this error: `Fatal error: Port 35729 is already in use by another process.`) eg,
-
-    grunt --lrp=35720
 
 ## Testing
 

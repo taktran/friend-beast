@@ -49,8 +49,7 @@ video, iframe, object {display: block;}
 /* -------------------General CSS-------------------- */
 body{
 	font-family: arial,helvetica;
-	color: #333;
-	color: rgba(0,0,0,0.5);
+	color: #222;
 }
 .wrap{
 	margin-left: auto;
@@ -69,7 +68,7 @@ p {font-size: 2em;}
 	font-size: 1.5em;
 }
 
-.section h1 {
+.section h1, .section h2{
 	text-align:center;
 }
 
@@ -200,43 +199,76 @@ input[type=radio]:checked:after {opacity: 1;}
 }
 
 /* ----------------Bottom menu----------------------- */
-#infoMenu li a {
-	color: #fff;
-}
 
-#section2 h1{
-	color: #333;
+#slide1 {
+  background-color: #bda2fa;
 }
 
 #slide2 {
-	background-color: #8bcad9;
-}
-
-#slide3 {
 	background-color: #f2e394;
 }
 
-#slide4 {
-	background-color: #04bf9d;
+#slide3 {
+	background-color: #8bcad9;
 }
 
-#slide5 {
+#slide4 {
 	background-color: #ff8f4e;
 }
 
+#slide5 {
+	background-color: #6ae1aa;
+}
+
 #slide6 {
-	background-color: #bda2fa;
+	background-color: #f294af;
+}
+
+.slide h2{
+  font-size: 2em;
+  margin-bottom: 30px;
 }
 
 .slide-content{
 	width: 80%;
 	margin: 0 auto;
 	height: 100%;
-	margin-top: 100px
+	margin-top: 100px;
 }
 
-.slide-content form{
-	text-align: center;
+.field{
+  display: block;
+  margin-bottom: 35px;
+  font-size: 1.4em;
+}
+
+.field input{
+  float:left;
+  margin-right: 10px;
+}
+
+.wrapper{
+  width:100%;
+}
+
+.beast{
+  width:25%;
+ display: inline-block;
+ float: left;
+ margin-right: 5%;
+}
+
+.beast img{
+  width:100%;
+  height: auto;
+  display: block;
+}
+
+.answers{
+  width: 70%;
+  display: inline-block;
+  float: left;
+  margin-top: 30px;
 }
 
 /* ------------------Layout CSS--------------------- */

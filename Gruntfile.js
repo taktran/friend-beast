@@ -139,10 +139,11 @@ module.exports = function (grunt) {
         files: '<%= jshint.test.src %>',
         tasks: ['jshint', 'karma:unit:run']
       },
-      css: {
-        files: '<%= app.sassDir %>/*.scss',
-        tasks: ['sass']
-      },
+      // Don't compile sass for now
+      // css: {
+      //   files: '<%= app.sassDir %>/*.scss',
+      //   tasks: ['sass']
+      // },
       html: {
         files: [
           '<%= app.publicBase %>/*.html',

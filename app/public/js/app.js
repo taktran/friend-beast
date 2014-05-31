@@ -41,13 +41,25 @@ module.exports = angular.module('app', [
   "$rootScope",
   "$scope",
   "$log",
+  "answersService",
   function(
     $rootScope,
     $scope,
-    $log
+    $log,
+    answersService
   ) {
     $rootScope.log = function() {
       $log.log.apply(null, arguments);
     };
+
+    $scope.save = function() {
+      answersService.add({
+        answers: {
+          hello: 'yes'
+        }
+      });
+    };
   }
-]);
+])
+
+.factory('answersService', require('./lib/answersService'));

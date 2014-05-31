@@ -42,18 +42,71 @@ module.exports = angular.module('app', [
   "$rootScope",
   "$scope",
   "$log",
+  "answersService",
   function(
     $rootScope,
     $scope,
-    $log
+    $log,
+    answersService
   ) {
     $rootScope.log = function() {
       $log.log.apply(null, arguments);
     };
-  }
-]);
 
-},{"angular":3,"angular-route":2,"lodash":5}],2:[function(require,module,exports){
+    $scope.save = function() {
+      answersService.add({
+        answers: {
+          hello: 'yes'
+        }
+      });
+    };
+  }
+])
+
+.factory('answersService', require('./lib/answersService'));
+
+},{"./lib/answersService":2,"angular":4,"angular-route":3,"lodash":6}],2:[function(require,module,exports){
+"use strict";
+
+/**
+ * answersService
+ */
+module.exports = function(
+  $http,
+  $q
+) {
+
+  var apiBase = "http://localhost:8081";
+  var GET_URL = apiBase + "/answers";
+  var POST_URL = apiBase + "/answers";
+
+  return {
+    all: function() {
+      var deferred = $q.defer();
+
+      $http.get(GET_URL).success(function(results) {
+        deferred.resolve(results);
+      });
+
+      return deferred.promise;
+    },
+    add: function(answers) {
+      var deferred = $q.defer();
+
+      $http.post(POST_URL, answers).success(function(results) {
+        deferred.resolve(results);
+      });
+
+      return deferred.promise;
+    }
+  };
+};
+
+module.exports["$inject"] = [
+  "$http",
+  "$q"
+];
+},{}],3:[function(require,module,exports){
 /**
  * @license AngularJS v1.2.17-build.163+sha.fafcd62
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -982,12 +1035,12 @@ function ngViewFillContentFactory($compile, $controller, $route) {
 
 })(window, window.angular);
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 require('./lib/angular.min.js');
 
 module.exports = angular;
 
-},{"./lib/angular.min.js":4}],4:[function(require,module,exports){
+},{"./lib/angular.min.js":5}],5:[function(require,module,exports){
 /*
  AngularJS v1.2.16
  (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -1199,7 +1252,7 @@ function(a){var c={addOption:C,removeOption:C};return{restrict:"E",priority:100,
 terminal:!0});O.angular.bootstrap?console.log("WARNING: Tried to load angular more than once."):((Ga=O.jQuery)?(y=Ga,D(Ga.fn,{scope:Ja.scope,isolateScope:Ja.isolateScope,controller:Ja.controller,injector:Ja.injector,inheritedData:Ja.inheritedData}),Ab("remove",!0,!0,!1),Ab("empty",!1,!1,!1),Ab("html",!1,!1,!0)):y=N,Ea.element=y,Zc(Ea),y(U).ready(function(){Wc(U,$b)}))})(window,document);!angular.$$csp()&&angular.element(document).find("head").prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}</style>');
 //# sourceMappingURL=angular.min.js.map
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 (function (global){
 /**
  * @license

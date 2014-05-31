@@ -418,8 +418,7 @@ input[type=radio]:checked:after {opacity: 1;}
 
 .beast-wrapper span{
   display: block;
-  position: absolute;
-  z-index: 1;
+  position: absolute;  
   width:100%;
   top: 0;
   bottom: 0;
@@ -430,9 +429,28 @@ input[type=radio]:checked:after {opacity: 1;}
 }
 
 #beastHead .value-1{
-  background: url("head_q1.png") center no-repeat;
+  background: url("../images/head/head_q1.png") center no-repeat;
   background-size: cover;
+  z-index: 1;
 }
+
+#beastHead .value-2{
+  background: url("../images/head/head_q2.png") center no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+
+
+
+
+#beastHeart .value-1{
+  background: url("../images/heart/heart_q1.png") center no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+
 
 .answers{
   width: 70%;

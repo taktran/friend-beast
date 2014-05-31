@@ -152,6 +152,7 @@ module.exports = function (grunt) {
         files: [
           '<%= app.publicBase %>/*.html',
           '<%= app.publicBase %>/*.htm',
+          '<%= app.publicBase %>/templates/*.html',
           '<%= app.publicBase %>/css/*.css'
         ],
         options: {

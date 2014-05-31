@@ -434,6 +434,8 @@ input[type=radio]:checked:after {opacity: 1;}
 
 }
 
+/*Beast head*/
+
 #beastHead .value-1{
   background: url("../images/head/head_q1.png") center no-repeat;
   background-size: cover;
@@ -446,9 +448,19 @@ input[type=radio]:checked:after {opacity: 1;}
   z-index: 1;
 }
 
+#beastHead .value-3{
+  background: url("../images/head/head_q3.png") center no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
 
+#beastHead .value-4{
+  background: url("../images/head/head_q4.png") center no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
 
-
+/*Beat heart*/
 
 #beastHeart .value-1{
   background: url("../images/heart/heart_q1.png") center no-repeat;
@@ -456,6 +468,61 @@ input[type=radio]:checked:after {opacity: 1;}
   z-index: 10;
 }
 
+#beastHeart .value-2{
+  background: url("../images/heart/heart_q2.png") center no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+#beastHeart .value-3{
+  background: url("../images/heart/heart_q3.png") center no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+#beastHeart .value-4{
+  background: url("../images/heart/heart_q4.png") center no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+#beastHeart .value-5{
+  background: url("../images/heart/heart_q5.png") center no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+/*Beastarms*/
+
+#beastHands .value-1{
+  background: url("../images/heart/heart_q1.png") center no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+#beastHands .value-2{
+  background: url("../images/heart/heart_q2.png") center no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+#beastHands .value-3{
+  background: url("../images/heart/heart_q3.png") center no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+#beastHands .value-4{
+  background: url("../images/heart/heart_q4.png") center no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+#beastHands .value-5{
+  background: url("../images/heart/heart_q5.png") center no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
 
 
 .answers{

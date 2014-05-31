@@ -164,16 +164,16 @@ label {
 
 /*------------- Checkbox ---------------*/
 
-input[type=checkbox] {
+input[type=radio] {
     width:35px;
     height: 35px;
-    border-radius:5px;
+    border-radius:50%;
     border: 1px solid #eb5f2d;
     float: right;
     position: relative;
 }
 
-input[type=checkbox]:after{
+input[type=radio]:after{
   content: '';
   width: 25px;
   height: 25px;
@@ -188,9 +188,9 @@ input[type=checkbox]:after{
   opacity: 0;
 }
 
-input[type=checkbox]:checked {border-color: #ded9cd; background-color: #fff;}
+input[type=radio]:checked {border-color: #ded9cd; background-color: #fff;}
 
-input[type=checkbox]:checked:after {opacity: 1;}
+input[type=radio]:checked:after {opacity: 1;}
 
 
 

@@ -1,1 +1,10 @@
-header!
+<canvas id="compare" width="320" height="240" style="display:none"></canvas>
+<video id="vid" autoplay loop width="320" height="240"></video>
+<canvas id="overlay" width="320" height="240"></canvas>
+<canvas id="debug" width="320" height="240"></canvas>
+
+<p id='gUMMessage'></p>
+<p>Status : <span id='headtrackerMessage'></span></p>
+<p><input type="button" onclick="htracker.stop();htracker.start();" value="reinitiate facedetection"></input>
+<br/><br/>
+<input type="checkbox" onclick="showProbabilityCanvas()" value="asdfasd"></input>Show probability-map</p>

@@ -68,6 +68,8 @@ module.exports = angular.module('app', [
       if (!_.isEmpty(answers)) {
         answersService.add({
           answers: answers
+        }).then(function(results) {
+          $rootScope.log(results);
         });
       }
     };

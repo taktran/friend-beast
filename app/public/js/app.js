@@ -17,6 +17,7 @@ module.exports = angular.module('app', [
 
   require('./lib/config').name,
   require('./lib/header').name,
+  require('./lib/admin').name
 ])
 
 .config([

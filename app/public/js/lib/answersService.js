@@ -12,6 +12,7 @@ module.exports = function(
   var apiBase = env.option('apiBase');
   var GET_URL = apiBase + "/answers";
   var POST_URL = apiBase + "/answers";
+  var GRAPH_VALUES_URL = apiBase + "/graph/values";
 
   return {
     all: function() {
@@ -31,7 +32,16 @@ module.exports = function(
       });
 
       return deferred.promise;
-    }
+    },
+    graphValues: function() {
+      var deferred = $q.defer();
+
+      $http.get(GRAPH_VALUES_URL).success(function(results) {
+        deferred.resolve(results);
+      });
+
+      return deferred.promise;
+    },
   };
 };
 

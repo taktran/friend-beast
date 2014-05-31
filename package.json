@@ -44,6 +44,7 @@
     "angular": "^1.2.16",
     "angular-route": "^1.2.16",
     "grunt-shell": "^0.7.0",
-    "headtrackr": "0.0.1"
+    "headtrackr": "0.0.1",
+    "d3": "^3.4.8"
   }
 }

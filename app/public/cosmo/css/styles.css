@@ -1,0 +1,246 @@
+/* -----------------Reset CSS---------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;    
+}
+fieldset,img {
+    border: 0;
+}
+
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+
+strong{
+	font-weight: bold;
+}
+
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+caption,th {text-align: left;}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#222;
+}
+
+q:before,q:after {content:'';}
+
+abbr,acronym { border: 0;}
+
+video, iframe, object {display: block;}
+
+
+/* -------------------General CSS-------------------- */
+body{
+	font-family: arial,helvetica;
+	color: #333;
+	color: rgba(0,0,0,0.5);
+}
+.wrap{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+}
+
+h1 {font-size: 6em;}
+
+p {font-size: 2em;}
+
+.intro p {
+	width: 50%;
+	margin: 0 auto;
+	font-size: 1.5em;
+}
+
+.section h1 {
+	text-align:center;
+}
+
+.centered {
+  text-align: center;
+  margin: 0 auto;
+}
+
+button {
+  width: auto;
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+  background-color: #e54e39;
+  padding: 8px 25px;
+  display: block;
+  cursor: pointer;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  transition: all 200ms;
+  border-radius: 5px;
+}
+button:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.show {
+  display: block !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/*------------- Select/Input/Textarea/Form ---------------*/
+select, input {
+  width: 200px;
+  height: auto;
+  padding: 10px;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #dddddd;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+select:hover, input:hover {
+  border-color: #e54e39;
+}
+select:focus, input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #e54e39;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+textarea {
+	min-width: 200px;
+	min-height: 40px;
+	display: block;
+  	border: 1px solid #dddddd;
+  	margin: 10px auto 20px;	
+}
+
+textarea:hover {
+  border-color: #e54e39;
+}
+
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px #e54e39;
+}
+
+label {
+  vertical-align: middle;
+  font-weight: normal;
+}
+
+.inlined{
+	display: inline-block;
+	width: 20%;
+	float: left;
+	margin: 0 5%;
+}
+
+/*------------- Checkbox ---------------*/
+
+input[type=checkbox] {
+    width:35px;
+    height: 35px;
+    border-radius:5px;
+    border: 1px solid #eb5f2d;
+    float: right;
+    position: relative;
+}
+
+input[type=checkbox]:after{
+  content: '';
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background:url(../images/tick.png) no-repeat center;
+  background-size: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  opacity: 0;
+}
+
+input[type=checkbox]:checked {border-color: #ded9cd; background-color: #fff;}
+
+input[type=checkbox]:checked:after {opacity: 1;}
+
+
+
+/* -------------------Overwriting styles for the navigation dots (to place it where we want)-------------------- */
+.fullPage-slidesNav.bottom{
+	bottom: 25px;
+}
+
+/* ----------------Bottom menu----------------------- */
+#infoMenu li a {
+	color: #fff;
+}
+
+#section2 h1{
+	color: #333;
+}
+
+#slide2 {
+	background-color: #8bcad9;
+}
+
+#slide3 {
+	background-color: #f2e394;
+}
+
+#slide4 {
+	background-color: #04bf9d;
+}
+
+#slide5 {
+	background-color: #ff8f4e;
+}
+
+#slide6 {
+	background-color: #bda2fa;
+}
+
+.slide-content{
+	width: 80%;
+	margin: 0 auto;
+	height: 100%;
+	margin-top: 100px
+}
+
+.slide-content form{
+	text-align: center;
+}
+
+/* ------------------Layout CSS--------------------- */
+
+
+
+	

@@ -29,10 +29,11 @@ module.exports = angular.module('app', [
       .when('/', {
         templateUrl: 'templates/app.html',
         controller:'AppCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
       });
+      // No, catchall
+      // .otherwise({
+      //   redirectTo: '/'
+      // });
   }
 ])
 

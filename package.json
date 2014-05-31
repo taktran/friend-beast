@@ -7,6 +7,9 @@
     "start": "node bin/server.js",
     "test": "grunt ci:test"
   },
+  "deployment": {
+    "staging": "git@heroku.com:friend-beast.git"
+  },
   "engines": {
     "node": "0.10.x",
     "npm": "1.3.x"
@@ -39,6 +42,7 @@
     "lodash": "^2.4.1",
     "jquery": "^2.1.0",
     "angular": "^1.2.16",
-    "angular-route": "^1.2.16"
+    "angular-route": "^1.2.16",
+    "grunt-shell": "^0.7.0"
   }
 }

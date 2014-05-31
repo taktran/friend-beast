@@ -24,27 +24,31 @@
               <img src="images/dave_q1.png" id="q1Img">
             </div>
             <div class="answers">
-                <div id="q1a1" class="field">
+                <div id="q1a1" class="field"
+                  ng-class="beastHeadVal === '1' ? 'active' : ''">
                     <i></i>
                     <input id="q1a1-input" type="radio" name="q1"  value="1"
                     ng-model="beastHeadVal">
                     <label for="q1a1-input">Yes, I understood more, and this gave me a real boost in confidence!</label>
                 </div>
-                <div id="q1a2" class="field">
+                <div id="q1a2" class="field"
+                  ng-class="beastHeadVal === '2' ? 'active' : ''">
                     <i></i>
                     <input id="q1a2-input" type="radio" name="q1"
                     value="2"
                     ng-model="beastHeadVal">
                     <label for="q1a2-input">Yes, I understood more but I still had lots of questions. I knew the doctors and nurses were busy so I didn’t want to ask them.</label>
                 </div>
-                <div id="q1a3" class="field">
+                <div id="q1a3" class="field"
+                  ng-class="beastHeadVal === '3' ? 'active' : ''">
                     <i></i>
                     <input id="q1a3-input" type="radio" name="q1"
                     value="3"
                     ng-model="beastHeadVal">
                     <label for="q1a3-input">Yes, but when I knew more about what was happening around me it made me scared</label>
                 </div>
-                <div id="q1a4" class="field">
+                <div id="q1a4" class="field"
+                  ng-class="beastHeadVal === '4' ? 'active' : ''">
                     <i></i>
                     <input id="q1a4-input" type="radio" name="q1"
                     value="4"
@@ -64,21 +68,24 @@
               <img src="images/dave_q2.png" id="q2Img">
             </div>
             <div class="answers">
-                <div id="q2a1" class="field">
+                <div id="q2a1" class="field"
+                  ng-class="beastHeartVal === '1' ? 'active' : ''">
                     <input id="q2a1-input" type="radio" name="q2"
                       value="1"
                       ng-model="beastHeartVal">
                     <label for="q2a1-input">Yes, and people listened to me.</label>
                 </div>
 
-                <div id="q2a2" class="field">
+                <div id="q2a2" class="field"
+                  ng-class="beastHeartVal === '2' ? 'active' : ''">
                     <input id="q2a2-input" type="radio" name="q2"
                       value="2"
                       ng-model="beastHeartVal">
                     <label for="q2a2-input">Not at first, but after getting to know people at the ward it was way easier.</label>
                 </div>
 
-                <div id="q2a3" class="field">
+                <div id="q2a3" class="field"
+                  ng-class="beastHeartVal === '3' ? 'active' : ''">
 
                     <input id="q2a3-input" type="radio" name="q2"
                       value="3"
@@ -86,7 +93,8 @@
                     <label for="q2a3-input">No, because I wanted to be brave.</label>
                 </div>
 
-                 <div id="q2a4" class="field">
+                 <div id="q2a4" class="field"
+                  ng-class="beastHeartVal === '4' ? 'active' : ''">
 
                     <input id="q2a4-input" type="radio" name="q2"
                       value="4"
@@ -94,7 +102,8 @@
                     <label for="q2a4-input">No, I tried to share my feelings but I felt like no one understood what I was trying to say.</label>
                 </div>
 
-                 <div id="q2a5" class="field">
+                 <div id="q2a5" class="field"
+                  ng-class="beastHeartVal === '5' ? 'active' : ''">
                     <input id="q2a5-input" type="radio" name="q2"
                       value="5"
                       ng-model="beastHeartVal">
@@ -113,28 +122,32 @@
               <img src="images/dave_q3.png" id="q3Img">
             </div>
             <div class="answers">
-                <div id="q3a1" class="field">
+                <div id="q3a1" class="field"
+                  ng-class="beastHandsVal === '1' ? 'active' : ''">
                     <input id="q3a1-input" type="radio" name="q3"
                       value="1"
                       ng-model="beastHandsVal">
                     <label for="q3a1-input">I wasn’t bored so it didn’t matter!</label>
                 </div>
 
-                <div id="q3a2" class="field">
+                <div id="q3a2" class="field"
+                  ng-class="beastHandsVal === '2' ? 'active' : ''">
                     <input id="q3a2-input" type="radio" name="q3"
                       value="2"
                       ng-model="beastHandsVal">
                     <label for="q3a2-input">No, I wish there were more books to read.</label>
                 </div>
 
-                <div id="q3a3" class="field">
+                <div id="q3a3" class="field"
+                  ng-class="beastHandsVal === '3' ? 'active' : ''">
                     <input id="q3a3-input" type="radio" name="q3"
                       value="3"
                       ng-model="beastHandsVal">
                     <label for="q3a3-input">No, I wish there were more movies and TV shows to watch.</label>
                 </div>
 
-                <div id="q3a4" class="field">
+                <div id="q3a4" class="field"
+                  ng-class="beastHandsVal === '4' ? 'active' : ''">
 
                     <input id="q3a4-input" type="radio" name="q3"
                       value="4"
@@ -142,7 +155,8 @@
                     <label for="q3a4-input">No, I wish there were more video games to play!</label>
                 </div>
 
-                <div id="q3a5" class="field">
+                <div id="q3a5" class="field"
+                  ng-class="beastHandsVal === '5' ? 'active' : ''">
                     <input id="q3a5-input" type="radio" name="q3"
                       value="5"
                       ng-model="beastHandsVal">
@@ -162,14 +176,16 @@
               <img src="images/dave_q4.png" id="q4Img">
             </div>
             <div class="answers">
-                <div id="q4a1" class="field">
+                <div id="q4a1" class="field"
+                  ng-class="beastBellyVal === '1' ? 'active' : ''">
                     <input id="q4a1-input" type="radio" name="q4"
                       value="1"
                       ng-model="beastBellyVal">
                     <label for="q4a1-input">It was okay. It’s not really a big deal.</label>
                 </div>
 
-                <div id="q4a2" class="field">
+                <div id="q4a2" class="field"
+                  ng-class="beastBellyVal === '2' ? 'active' : ''">
 
                     <input id="q4a2-input" type="radio" name="q4"
                       value="2"
@@ -177,21 +193,24 @@
                     <label for="q4a2-input">To be honest I wasn’t that hungry.</label>
                 </div>
 
-                <div id="q4a3" class="field">
+                <div id="q4a3" class="field"
+                  ng-class="beastBellyVal === '3' ? 'active' : ''">
                     <input id="q4a3-input" type="radio" name="q4"
                       value="3"
                       ng-model="beastBellyVal">
                     <label for="q4a3-input">So good, yum!</label>
                 </div>
 
-                 <div id="q4a4" class="field">
+                 <div id="q4a4" class="field"
+                  ng-class="beastBellyVal === '4' ? 'active' : ''">
                     <input id="q4a4-input" type="radio" name="q4"
                       value="4"
                       ng-model="beastBellyVal">
                     <label for="q4a4-input">So gross, yuck!</label>
                 </div>
 
-                 <div id="q4a5" class="field">
+                 <div id="q4a5" class="field"
+                  ng-class="beastBellyVal === '5' ? 'active' : ''">
 
                     <input id="q4a5-input" type="radio" name="q4"
                       value="5"
@@ -211,28 +230,32 @@
               <img src="images/dave_q5.png" id="q1Img">
             </div>
             <div class="answers">
-                <div id="q5a1" class="field">
+                <div id="q5a1" class="field"
+                  ng-class="beastLegsVal === '1' ? 'active' : ''">
                     <input id="q5a1-input" type="radio" name="q5"
                       value="1"
                       ng-model="beastLegsVal">
                     <label for="q5a1-input">It was pretty comfy but it didn’t look very nice.</label>
                 </div>
 
-                <div id="q5a2" class="field">
+                <div id="q5a2" class="field"
+                  ng-class="beastLegsVal === '2' ? 'active' : ''">
                     <input id="q5a2-input" type="radio" name="q5"
                       value="2"
                       ng-model="beastLegsVal">
                     <label for="q5a2-input">It looked okay but I wasn’t really comfy in my space.</label>
                 </div>
 
-                <div id="q5a3" class="field">
+                <div id="q5a3" class="field"
+                  ng-class="beastLegsVal === '3' ? 'active' : ''">
                     <input id="q5a3-input" type="radio" name="q5"
                       value="3"
                       ng-model="beastLegsVal">
                     <label for="q5a3-input">It was cool! I was comfy and I liked the way it looked! I felt at home.</label>
                 </div>
 
-                <div id="q5a4" class="field">
+                <div id="q5a4" class="field"
+                  ng-class="beastLegsVal === '4' ? 'active' : ''">
                     <input id="q5a4-input" type="radio" name="q5"
                       value="4"
                       ng-model="beastLegsVal">

@@ -245,7 +245,12 @@ input[type=radio]:checked:after {opacity: 1;}
   padding: 15px 0;
   border-radius: 20px;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+
+.field.active {
+  opacity: 1;
 }
 
 .field input{

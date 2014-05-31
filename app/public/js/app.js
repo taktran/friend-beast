@@ -13,9 +13,9 @@ require('angular-route');
 
 
 module.exports = angular.module('app', [
-  'ngRoute'
+  'ngRoute',
 
-  // require('../form').name,
+  require('./lib/config').name,
 ])
 
 .config([

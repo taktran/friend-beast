@@ -5,10 +5,11 @@
  */
 module.exports = function(
   $http,
-  $q
+  $q,
+  env
 ) {
 
-  var apiBase = "http://localhost:8081";
+  var apiBase = env.option('apiBase');
   var GET_URL = apiBase + "/answers";
   var POST_URL = apiBase + "/answers";
 
@@ -36,5 +37,6 @@ module.exports = function(
 
 module.exports["$inject"] = [
   "$http",
-  "$q"
+  "$q",
+  "env"
 ];

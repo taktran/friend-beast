@@ -20,6 +20,7 @@
 <body>
 
 <div id="fullpage">
+<form id="" method="post" action="/feedback">
 	<div class="section " id="section0">
 		<div class="intro">
 			<h1>Intro text</h1>
@@ -27,86 +28,119 @@
 			<button data-target="#section1">Click here</button>
 		</div>
 	</div>
-	<div class="section" id="section1">
+	<div class="section" id="section1">	
 	    <div class="slide" id="slide1" data-anchor="slide1">
 			<div class="intro">
 				<h1>Some text intro here</h1>
-				<p>Some more text</p>
+				<div>			
+				    <div class="field">
+				        <label for="q1a1">Not great</label>
+				        <input type="radio" id="q1a1" name="q1a1" value="" checked>
+				    </div>
+
+				    <div class="field">
+				        <label for="q1a2">Good</label>
+				        <input type="radio" id="q1a2" name="q1a2" value="">
+				    </div>
+
+				    <div class="field">
+				        <label for="q1a3">Awesome</label>
+				        <input type="radio" id="q1a3" name="q1a3" value="">
+				    </div>
+			    </div>				    
+			
 			</div>
 		</div>
 		
 	    <div class="slide" id="slide2" data-anchor="slide2">
 	    	<div class="slide-content">
-				<h1>Slide 2</h1>
-
-				<form id="ajax-slide2" method="post" action="/submit">
+				<h1>Question 2</h1>
+				<div>			
 				    <div class="field">
-				        <label for="name">Name:</label>
-				        <input type="text" id="name" name="name" required="reqired">
+				        <label for="q2a1">Not great</label>
+				        <input type="radio" id="q2a1" name="q2a1" value="" checked>
 				    </div>
 
 				    <div class="field">
-				        <label for="email">Email:</label>
-				        <input type="email" id="email" name="email" required="reqired">
+				        <label for="q2a2">Good</label>
+				        <input type="radio" id="q2a2" name="q2a2" value="">
 				    </div>
 
 				    <div class="field">
-				        <label for="message">Message:</label>
-				        <textarea id="message" name="message" required="reqired"></textarea>
+				        <label for="q2a3">Awesome</label>
+				        <input type="radio" id="q2a3" name="q2a3" value="">
 				    </div>
-
-				    <button type="submit" class="centered">Send</button>				   
-				</form>
+			    </div>				
 			</div>
 		</div>
 		
 		<div class="slide" id="slide3" data-anchor="slide3">
 			<div class="slide-content">
-				<h1>Slide 3</h1>
-
-				<form id="ajax-slide3" method="post" action="/feedback">
-				    <div class="field inlined">
-				        <label for="0">Not great</label>
-				        <input type="checkbox" id="val0" name="0" value="" checked>
+				<h1>Question3 </h1>
+				<div>			
+				    <div class="field">
+				        <label for="q3a1">Not great</label>
+				        <input type="radio" id="q3a1" name="q3a1" value="" checked>
 				    </div>
 
-				    <div class="field inlined">
-				        <label for="1">Good</label>
-				        <input type="checkbox" id="val1" name="1" value="">
+				    <div class="field">
+				        <label for="q3a2">Good</label>
+				        <input type="radio" id="q3a2" name="q3a2" value="">
 				    </div>
 
-				    <div class="field inlined">
-				        <label for="2">Awesome</label>
-				        <input type="checkbox" id="val2" name="2" value="">
-				    </div>				    
-				</form>
+				    <div class="field">
+				        <label for="q3a3">Awesome</label>
+				        <input type="radio" id="q3a3" name="q3a3" value="">
+				    </div>
+			    </div>
 			</div>
 		</div>
 
 		<div class="slide" id="slide4" data-anchor="slide4">
 			<div class="slide-content">
-				<h1>Slide 4</h1>
+				<h1>Question 4</h1>
+				<div>			
+				    <div class="field">
+				        <label for="q4a1">Not great</label>
+				        <input type="radio" id="q4a1" name="q4a1" value="" checked>
+				    </div>
+
+				    <div class="field">
+				        <label for="q4a2">Good</label>
+				        <input type="radio" id="q4a2" name="q4a2" value="">
+				    </div>
+
+				    <div class="field">
+				        <label for="q4a3">Awesome</label>
+				        <input type="radio" id="q4a3" name="q4a3" value="">
+				    </div>
+			    </div>
 			</div>
 		</div>
 
 		<div class="slide" id="slide5" data-anchor="slide5">
 			<div class="slide-content">
-				<h1>Slide 5</h1>
-			</div>
-		</div>
+				<h1>Question5</h1>
+				<div>			
+				    <div class="field">
+				        <label for="q5a1">Not great</label>
+				        <input type="radio" id="q5a1" name="q5a1" value="" checked>
+				    </div>
 
-		<div class="slide" id="slide6" data-anchor="slide6">
-			<div class="slide-content">
-				<h1>Slide 6</h1>
-			</div>
-		</div>
-	</div>
+				    <div class="field">
+				        <label for="q5a2">Good</label>
+				        <input type="radio" id="q5a2" name="q5a2" value="">
+				    </div>
 
-	<div class="section" id="section2">
-		<div class="intro">
-			<h1>Thank you very much for your feedback</h1>
-		</div>
+				    <div class="field">
+				        <label for="q5a3">Awesome</label>
+				        <input type="radio" id="q5a3" name="q5a3" value="">
+				    </div>
+			    </div>
+			</div>
+		</div>		
 	</div>
+</form>	
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>

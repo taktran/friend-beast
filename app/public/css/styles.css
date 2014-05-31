@@ -79,17 +79,20 @@ p {font-size: 2em;}
 
 button {
   width: auto;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   text-align: center;
   color: white;
-  background-color: #e54e39;
-  padding: 8px 25px;
+  background-color: #e82d2d;
+  padding: 20px 30px;
   display: block;
   cursor: pointer;
   -webkit-transition: all 200ms;
   -moz-transition: all 200ms;
   transition: all 200ms;
-  border-radius: 5px;
+  border-radius: 20px;
+  border: none;
+  margin: 0 auto;
+  outline: none;
 }
 button:hover {
   -webkit-transform: scale(1.1);
@@ -119,11 +122,11 @@ select, input {
   border-radius: 5px;
 }
 select:hover, input:hover {
-  border-color: #e54e39;
+  border-color: #e82d2d;
 }
 select:focus, input:focus {
   outline: none;
-  box-shadow: 0 0 5px #e54e39;
+  box-shadow: 0 0 5px #e82d2d;
 }
 
 input {
@@ -141,12 +144,12 @@ textarea {
 }
 
 textarea:hover {
-  border-color: #e54e39;
+  border-color: #e82d2d;
 }
 
 textarea:focus {
   outline: none;
-  box-shadow: 0 0 5px #e54e39;
+  box-shadow: 0 0 5px #e82d2d;
 }
 
 label {
@@ -240,6 +243,9 @@ input[type=radio]:checked:after {opacity: 1;}
   display: block;
   margin-bottom: 35px;
   font-size: 1.4em;
+  border: 1px solid white;
+  padding: 25px 0;
+  border-radius: 20px;
 }
 
 .field input{
@@ -251,14 +257,14 @@ input[type=radio]:checked:after {opacity: 1;}
   width:100%;
 }
 
-.beast{
+.beast, .beast-build{
   width:25%;
  display: inline-block;
  float: left;
  margin-right: 5%;
 }
 
-.beast img{
+.beast img, #daveWrapper{
   width:100%;
   height: auto;
   display: block;

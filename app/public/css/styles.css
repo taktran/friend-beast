@@ -292,6 +292,108 @@ input[type=radio]:checked:after {opacity: 1;}
   background-size: 100% 100%;
 }
 
+
+#q2a1 i{
+  background: url('../images/icons/heart/icon_heart_q1.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+#q2a2 i{
+  background: url('../images/icons/heart/icon_heart_q2.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+#q2a3 i{
+  background: url('../images/icons/heart/icon_heart_q3.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+#q2a4 i{
+  background: url('../images/icons/heart/icon_heart_q4.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+#q2a5 i{
+  background: url('../images/icons/heart/icon_heart_q5.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+/*Arms icons*/
+
+#q3a1 i{
+  background: url('../images/icons/arms/icon_arms_q1.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+#q3a2 i{
+  background: url('../images/icons/arms/icon_arms_q2.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+#q3a3 i{
+  background: url('../images/icons/arms/icon_arms_q3.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+#q3a4 i{
+  background: url('../images/icons/arms/icon_arms_q4.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+#q3a5 i{
+  background: url('../images/icons/arms/icon_arms_q5.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+/*Tumy icons*/
+
+#q4a1 i{
+  background: url('../images/icons/tum/icon_tum_q1.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+#q4a2 i{
+  background: url('../images/icons/tum/icon_tum_q2.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+#q4a3 i{
+  background: url('../images/icons/tum/icon_tum_q3.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+#q4a4 i{
+  background: url('../images/icons/tum/icon_tum_q4.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+#q4a5 i{
+  background: url('../images/icons/tum/icon_tum_q5.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+/*Legs icons*/
+
+#q5a1 i{
+  background: url('../images/icons/legs/icon_legs_q1.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+#q5a2 i{
+  background: url('../images/icons/legs/icon_legs_q2.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+#q5a3 i{
+  background: url('../images/icons/legs/icon_legs_q3.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+#q5a4 i{
+  background: url('../images/icons/legs/icon_legs_q4.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
 .wrapper{
   width:100%;
 }

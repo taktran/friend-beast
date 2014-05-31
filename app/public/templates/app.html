@@ -236,27 +236,31 @@
         <div class="slide-content">
 
           <div class="wrapper">
-
-            <div class="beast-build">
-              <div class="beast-wrapper">
-                <span id="beastHead"
-                  ng-class="beastHeadVal ? 'value-' + beastHeadVal : ''"></span>
-                <span id="beastHands"
-                  ng-class="beastHandsVal ? 'value-' + beastHandsVal : ''"></span>
-                <span id="beastHeart"
-                  ng-class="beastHeartVal ? 'value-' + beastHeartVal : ''"></span>
-                <span id="beastBelly"
-                  ng-class="beastBellyVal ? 'value-' + beastBellyVal : ''"></span>
-                <span id="beastLegs"
-                  ng-class="beastLegsVal ? 'value-' + beastLegsVal : ''"></span>
-              </div>
-              <img src="images/dave_wrapper.png" id="daveWrapper">
+            <div ng-if="!hasSubmit">
+              <button type="submit" class="bigbtn send-btn"
+                ng-click="save()">Send feedback</button>
             </div>
-            <div class="answers centered">
-              <h1>Thank you for your time</h1>
-              <h2>Please press the button below</h2>
-              <button type="submit" class="bigbtn"
-                ng-click="save()">Show us your beast :)</button>
+            <div ng-if="hasSubmit">
+              <div class="beast-build">
+                <div class="beast-wrapper">
+                  <span id="beastHead"
+                    ng-class="beastHeadVal ? 'value-' + beastHeadVal : ''"></span>
+                  <span id="beastHands"
+                    ng-class="beastHandsVal ? 'value-' + beastHandsVal : ''"></span>
+                  <span id="beastHeart"
+                    ng-class="beastHeartVal ? 'value-' + beastHeartVal : ''"></span>
+                  <span id="beastBelly"
+                    ng-class="beastBellyVal ? 'value-' + beastBellyVal : ''"></span>
+                  <span id="beastLegs"
+                    ng-class="beastLegsVal ? 'value-' + beastLegsVal : ''"></span>
+                </div>
+                <button type="submit" class="bigbtn restart-btn"
+                  ng-click="restart()">Restart</button>
+                <img src="images/dave_wrapper.png" id="daveWrapper">
+              </div>
+              <div class="answers centered">
+                <h1>Thank you for your time</h1>
+              </div>
             </div>
           </div>
 

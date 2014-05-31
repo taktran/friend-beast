@@ -8,7 +8,7 @@ a{
 	text-decoration:none;
 }
 table {
-    border-spacing: 0;    
+    border-spacing: 0;
 }
 fieldset,img {
     border: 0;
@@ -140,7 +140,7 @@ textarea {
 	min-height: 40px;
 	display: block;
   	border: 1px solid #dddddd;
-  	margin: 10px auto 20px;	
+  	margin: 10px auto 20px;
 }
 
 textarea:hover {
@@ -277,8 +277,11 @@ input[type=radio]:checked:after {opacity: 1;}
   margin-top: 30px;
 }
 
+.send-btn {
+  margin-top: 50%;
+}
+
 /* ------------------Layout CSS--------------------- */
 
 
 
-	

@@ -55,6 +55,10 @@ module.exports = angular.module('app', [
       $log.log.apply(null, arguments);
     };
 
+    $scope.restart = function() {
+      $scope.hasSubmit = false;
+    };
+
     $scope.save = function() {
       var formAnswers = $("#answers").serializeArray();
       var answers = {};
@@ -71,6 +75,7 @@ module.exports = angular.module('app', [
           answers: answers
         }).then(function(results) {
           $rootScope.log(results);
+          $scope.hasSubmit = true;
         });
       }
     };

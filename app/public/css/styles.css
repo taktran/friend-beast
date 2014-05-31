@@ -251,6 +251,16 @@ input[type=radio]:checked:after {opacity: 1;}
 .field input{
   float:left;
   margin-right: 10px;
+  position: relative;
+}
+
+.field input:before{
+  content:"";
+  width:100px;
+  height: 100px;
+  position: absolute;
+  display: block;
+  left: 0;  
 }
 
 .wrapper{
@@ -268,6 +278,29 @@ input[type=radio]:checked:after {opacity: 1;}
   width:100%;
   height: auto;
   display: block;
+}
+
+.beast-wrapper{
+  width: 100%;
+  position: relative;
+}
+
+.beast-wrapper span{
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width:100%;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right: 0;
+  margin: auto;
+
+}
+
+#beastHead .value-1{
+  background: url("head_q1.png") center no-repeat;
+  background-size: cover;
 }
 
 .answers{

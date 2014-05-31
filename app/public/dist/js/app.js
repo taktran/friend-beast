@@ -76,8 +76,8 @@ module.exports = angular.module('app', [
           answers: answers
         }).then(function(results) {
           $rootScope.log(results);
-          $scope.hasSubmit = true;
         });
+        $scope.hasSubmit = true;
       }
     };
   }

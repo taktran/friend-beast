@@ -17,6 +17,7 @@ module.exports = angular.module('app', [
   'ngRoute',
 
   require('./lib/config').name,
+  require('./lib/header').name,
 ])
 
 .config([
@@ -65,7 +66,7 @@ module.exports = angular.module('app', [
 
 .factory('answersService', require('./lib/answersService'));
 
-},{"./lib/answersService":2,"./lib/config":3,"angular":7,"angular-route":6,"lodash":9}],2:[function(require,module,exports){
+},{"./lib/answersService":2,"./lib/config":3,"./lib/header":6,"angular":8,"angular-route":7,"lodash":10}],2:[function(require,module,exports){
 "use strict";
 
 /**
@@ -160,7 +161,7 @@ module.exports = angular.module('config', [])
 .factory('env', require('./services/env'))
 .factory('currentEnvironment', require('./services/currentEnvironment'));
 
-},{"./services/currentEnvironment":4,"./services/env":5,"angular":7}],4:[function(require,module,exports){
+},{"./services/currentEnvironment":4,"./services/env":5,"angular":8}],4:[function(require,module,exports){
 var _ = require('lodash');
 
 /**
@@ -202,7 +203,7 @@ module.exports["$inject"] = [
   '$window',
   'ENV_HOSTNAMES'
 ];
-},{"lodash":9}],5:[function(require,module,exports){
+},{"lodash":10}],5:[function(require,module,exports){
 /**
  * env
  *
@@ -241,6 +242,50 @@ module.exports["$inject"] = [
   'currentEnvironment'
 ];
 },{}],6:[function(require,module,exports){
+/*jshint unused:false */
+"use strict";
+
+var _ = require('lodash');
+
+var angular = require('angular');
+require('angular-route');
+
+module.exports = angular.module('header', [
+  'ngRoute',
+
+  require('../config').name,
+])
+
+.config([
+  '$routeProvider',
+  function(
+    $routeProvider
+  ) {
+    $routeProvider
+      .when('/header', {
+        templateUrl: 'templates/header.html',
+        controller: 'HeaderCtrl'
+      });
+  }
+])
+
+/**
+ * HeaderCtrl controller
+ */
+.controller('HeaderCtrl', [
+  "$rootScope",
+  "$scope",
+  "$log",
+  function(
+    $rootScope,
+    $scope,
+    $log
+  ) {
+    console.log("header");
+  }
+]);
+
+},{"../config":3,"angular":8,"angular-route":7,"lodash":10}],7:[function(require,module,exports){
 /**
  * @license AngularJS v1.2.17-build.163+sha.fafcd62
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -1169,12 +1214,12 @@ function ngViewFillContentFactory($compile, $controller, $route) {
 
 })(window, window.angular);
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 require('./lib/angular.min.js');
 
 module.exports = angular;
 
-},{"./lib/angular.min.js":8}],8:[function(require,module,exports){
+},{"./lib/angular.min.js":9}],9:[function(require,module,exports){
 /*
  AngularJS v1.2.16
  (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -1386,7 +1431,7 @@ function(a){var c={addOption:C,removeOption:C};return{restrict:"E",priority:100,
 terminal:!0});O.angular.bootstrap?console.log("WARNING: Tried to load angular more than once."):((Ga=O.jQuery)?(y=Ga,D(Ga.fn,{scope:Ja.scope,isolateScope:Ja.isolateScope,controller:Ja.controller,injector:Ja.injector,inheritedData:Ja.inheritedData}),Ab("remove",!0,!0,!1),Ab("empty",!1,!1,!1),Ab("html",!1,!1,!0)):y=N,Ea.element=y,Zc(Ea),y(U).ready(function(){Wc(U,$b)}))})(window,document);!angular.$$csp()&&angular.element(document).find("head").prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}</style>');
 //# sourceMappingURL=angular.min.js.map
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 (function (global){
 /**
  * @license

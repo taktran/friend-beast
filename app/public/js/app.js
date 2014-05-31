@@ -16,6 +16,7 @@ module.exports = angular.module('app', [
   'ngRoute',
 
   require('./lib/config').name,
+  require('./lib/header').name,
 ])
 
 .config([

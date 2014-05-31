@@ -12,11 +12,11 @@ var server = new Hapi.Server(host, port, {
 });
 
 // Initialise mongo
-var db = require('./db');
+var db = require('../lib/db');
 db.init();
 
 // Initialise api routes
-server.route(require('./routes/api'));
+server.route(require('../lib/routes/api'));
 
 // Serve static files
 server.route({

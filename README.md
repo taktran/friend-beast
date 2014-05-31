@@ -14,9 +14,9 @@ For dev server with livereload, js compilation etc:
 
 For dev server with api:
 
-    node lib/server.js
+    node bin/server.js
     # or, for auto reload
-    nodemon lib/server.js
+    nodemon bin/server.js
 
 TODO: Consolidate these
 

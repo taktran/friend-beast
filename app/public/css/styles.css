@@ -171,7 +171,6 @@ input[type=radio] {
     height: 35px;
     border-radius:50%;
     border: 1px solid #eb5f2d;
-    float: right;
     position: relative;
 }
 
@@ -241,26 +240,41 @@ input[type=radio]:checked:after {opacity: 1;}
 
 .field{
   display: block;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   font-size: 1.4em;
   border: 1px solid white;
-  padding: 25px 0;
+  padding: 15px 0;
   border-radius: 20px;
-}
-
-.field input{
-  float:left;
-  margin-right: 10px;
   position: relative;
 }
 
-.field input:before{
-  content:"";
-  width:100px;
-  height: 100px;
+.field input{
+  opacity: 0.2;
+  width:10%;
+  margin-right: 5%;
+  float: left;
+  display: inline-block;
+}
+
+.field label{
+  width:85%;
+  display: inline-block;
+}
+
+.field i{
+  width:50px;
+  height: 50px;
   position: absolute;
   display: block;
-  left: 0;  
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left:10px;
+}
+
+#q1a1 i{
+  background: url('../images/icons/head/icon_head_q1.png') center no-repeat;
+  background-size: 100% 100%;
 }
 
 .wrapper{

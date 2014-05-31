@@ -56,11 +56,21 @@ module.exports = angular.module('app', [
     };
 
     $scope.save = function() {
-      answersService.add({
-        answers: {
-          hello: 'yes'
+      var formAnswers = $("#answers").serializeArray();
+      var answers = {};
+
+      _.each(formAnswers, function(a) {
+        var val = a.value;
+        if (!_.isEmpty(val)) {
+          answers[a.name] = val;
         }
       });
+
+      if (!_.isEmpty(answers)) {
+        answersService.add({
+          answers: answers
+        });
+      }
     };
   }
 ])

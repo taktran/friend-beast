@@ -25,7 +25,7 @@ TODO: Consolidate these
 
 ## Testing
 
-Uses [karma](http://karma-runner.github.io/) and [jasmine](http://pivotal.github.io/jasmine/).
+Uses [karma](http://karma-runner.github.io/) and [jasmine](https://jasmine.github.io/).
 
 Karma is run automatically when `grunt` is called. To run it manually
 
